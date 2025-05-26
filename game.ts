@@ -1,4 +1,3 @@
-import { createHmac } from "crypto";
 import { DiceParser } from "./classes/dice_parser";
 import { FairRandom } from "./classes/fair_random";
 
