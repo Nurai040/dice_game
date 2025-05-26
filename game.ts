@@ -1,5 +1,6 @@
 import { DiceParser } from "./classes/dice_parser";
 import { FairRandom } from "./classes/fair_random";
+import { ProbabilityTable } from "./classes/probability_table";
 
 try {
   const dice = DiceParser.parser(process.argv.slice(2));
@@ -11,6 +12,8 @@ try {
   const userInput = 1;
   const reaveled = fair.reveal(userInput);
   console.log("Revealed:  ", reaveled);
+  console.log("table");
+  ProbabilityTable.buildTable(dice);
 } catch (error) {
   throw new Error(`Error occured during launch: ${error}`);
 }
