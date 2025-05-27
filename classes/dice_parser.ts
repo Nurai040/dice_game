@@ -22,7 +22,7 @@ export class DiceParser {
       if (values.length < 2) {
         throw new Error(`Die ${index} must have at least 2 faces`);
       }
-      if (!(values.length % 2)) {
+      if (values.length % 2) {
         throw new Error(`Die ${index} must be two sided`);
       }
       diceList.push(new Dice(values));

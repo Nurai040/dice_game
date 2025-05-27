@@ -101,7 +101,7 @@ export class Cli {
   async userFirstMove() {
     console.log(`You make the first move. Choose your dice: `);
     for (let i = 0; i < this.dice.length; i++) {
-      console.log(`${i}: ${this.dice}`);
+      console.log(`${i}: ${this.dice.values}`);
     }
     while (true) {
       const input = (await askQuestion("Your selection: ")).toLowerCase();
