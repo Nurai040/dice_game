@@ -14,13 +14,13 @@ export class DiceParser {
         const n = Number(a.trim());
         if (Number.isNaN(n)) {
           throw new Error(
-            `Die ${index + 1} has incorrect value - ${a}, it should be integer`
+            `Die ${index} has incorrect value - ${a}, it should be integer`
           );
         }
         return n;
       });
       if (values.length < 2) {
-        throw new Error(`Die ${index + 1} must have at least 2 faces`);
+        throw new Error(`Die ${index} must have at least 2 faces`);
       }
       diceList.push(new Dice(values));
     });

@@ -6,7 +6,7 @@ export class FairRandom {
   private range: number;
 
   constructor(range: number) {
-    if (range <= 1) throw new Error("Range must be at least 2");
+    if (range < 2) throw new Error("Range must be at least 2");
     this.range = range;
     this.key = randomBytes(32);
     this.number = randomInt(0, range);
